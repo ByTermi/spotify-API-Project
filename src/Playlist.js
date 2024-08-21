@@ -17,7 +17,7 @@ function Playlist({ playlist, onSavePlaylist, playlistName, setPlaylistName, set
           <li key={track.id} className="songContainer">
             <strong>{track.name}</strong>{" "}
             {track.artists.map((artist) => artist.name).join(", ")}
-            <a href="WWW" onClick={setPlaylist(playlist.filter( (current) => current.id !== track.id ))}>PATATA</a>
+            
           </li>
         ))}
       </ul>
