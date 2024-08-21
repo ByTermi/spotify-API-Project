@@ -25,6 +25,12 @@ body {
   flex-basis: 40%;
 }
 
+#signIn{
+  padding: 2rem;
+  background-color: white;
+  
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;

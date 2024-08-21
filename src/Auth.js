@@ -6,7 +6,7 @@ const AUTH_URL = `https://accounts.spotify.com/authorize?client_id=${CLIENT_ID}&
 
 function Auth() {
   return (
-    <div>
+    <div id='signIn'>
       <a href={AUTH_URL}>Iniciar sesión con Spotify</a>
     </div>
   );
