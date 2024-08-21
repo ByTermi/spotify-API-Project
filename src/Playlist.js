@@ -1,6 +1,6 @@
 import React from "react";
 
-function Playlist({ playlist, onSavePlaylist, playlistName, setPlaylistName }) {
+function Playlist({ playlist, onSavePlaylist, playlistName, setPlaylistName, setPlaylist }) {
   return (
     <div>
       <h2>Nombre de la Playlist:</h2>
@@ -17,6 +17,7 @@ function Playlist({ playlist, onSavePlaylist, playlistName, setPlaylistName }) {
           <li key={track.id} className="songContainer">
             <strong>{track.name}</strong>{" "}
             {track.artists.map((artist) => artist.name).join(", ")}
+            <a href="WWW" onClick={setPlaylist(playlist.filter( (current) => current.id !== track.id ))}>PATATA</a>
           </li>
         ))}
       </ul>

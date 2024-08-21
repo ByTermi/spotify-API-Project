@@ -146,6 +146,7 @@ function App() {
               onSavePlaylist={savePlaylistToSpotify}
               playlistName={playlistName}
               setPlaylistName={setPlaylistName}
+              setPlaylist={setPlaylist}
             />
           </div>
         </>

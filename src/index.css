@@ -7,44 +7,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: black;
 }
-*:not(button):not(input[type="submit"]):not([type="text"]) {
-  color: white;
-}
-
-#searchBarForm{
-  display: flex;
-  flex-direction: column;
-  width: 25%;
-}
-
-#container{
-  display: flex;
-  justify-content: space-around;
-}
-#container>*{
-  flex-basis: 40%;
-}
-
-#signIn{
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-#signIn>a{
-  padding: 2rem;
-  background-color: white;
-  border-radius: 1rem;
-  display: inline;
-  width: 30%;
-}
-#signIn>a>p{
-  color: black;
-}
-#signIn img{
-  width: 20%;
-}
 
 
 code {
