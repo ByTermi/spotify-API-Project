@@ -1,3 +1,4 @@
+import { render } from "@testing-library/react";
 import React from "react";
 
 function Playlist({ playlist, onSavePlaylist, playlistName, setPlaylistName, setPlaylist }) {
@@ -18,8 +19,8 @@ function Playlist({ playlist, onSavePlaylist, playlistName, setPlaylistName, set
             <strong>{track.name}</strong>{" "}
             {track.artists.map((artist) => artist.name).join(", ")}
             <button
-              onClick={() => setPlaylist(playlist.filter((current) => current.id !== track.id))}
-            >PATATA</button>
+              onClick={() => {setPlaylist(playlist.filter((current) => current.id !== track.id)) }}
+            >Delete</button>
           </li>
         ))}
       </ul>

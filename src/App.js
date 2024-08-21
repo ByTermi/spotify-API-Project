@@ -52,7 +52,10 @@ function App() {
   }
 
   function addToPlaylist(track) {
-    setPlaylist((prevPlaylist) => [...prevPlaylist, track]);
+    if(!playlist.some(currentTrack => currentTrack.id === track.id)){
+      setPlaylist((prevPlaylist) => [...prevPlaylist, track]);
+    }
+    //setPlaylist((prevPlaylist) => [...prevPlaylist, track]);
   }
 
   async function savePlaylistToSpotify() {
