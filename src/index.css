@@ -17,6 +17,14 @@ body {
   width: 25%;
 }
 
+#container{
+  display: flex;
+  justify-content: space-around;
+}
+#container>*{
+  flex-basis: 40%;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
