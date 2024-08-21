@@ -26,10 +26,26 @@ body {
 }
 
 #signIn{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#signIn>a{
   padding: 2rem;
   background-color: white;
-  
+  border-radius: 1rem;
+  display: inline;
+  width: 30%;
 }
+#signIn>a>p{
+  color: black;
+}
+#signIn img{
+  width: 20%;
+}
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
