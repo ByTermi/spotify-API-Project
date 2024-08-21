@@ -5,6 +5,16 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: black;
+}
+*:not(button):not(input[type="submit"]):not([type="text"]) {
+  color: white;
+}
+
+#searchBarForm{
+  display: flex;
+  flex-direction: column;
+  width: 25%;
 }
 
 code {
