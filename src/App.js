@@ -52,7 +52,7 @@ function App() {
   }
 
   function addToPlaylist(track) {
-    if(!playlist.some(currentTrack => currentTrack.id === track.id)){
+    if(!playlist.some(track)){
       setPlaylist((prevPlaylist) => [...prevPlaylist, track]);
     }
     //setPlaylist((prevPlaylist) => [...prevPlaylist, track]);
