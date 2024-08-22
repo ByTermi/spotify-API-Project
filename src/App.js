@@ -52,10 +52,7 @@ function App() {
   }
 
   function addToPlaylist(track) {
-    if(!playlist.some(track)){
-      setPlaylist((prevPlaylist) => [...prevPlaylist, track]);
-    }
-    //setPlaylist((prevPlaylist) => [...prevPlaylist, track]);
+    setPlaylist((prevPlaylist) => [...prevPlaylist, track]);
   }
 
   async function savePlaylistToSpotify() {
@@ -122,7 +119,6 @@ function App() {
 
       alert("Playlist guardada exitosamente en tu cuenta de Spotify!");
     } catch (error) {
-      console.error("Error al guardar la playlist:", error);
       alert(
         "Hubo un error al guardar la playlist. Por favor, inténtalo de nuevo."
       );

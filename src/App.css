@@ -1,3 +1,8 @@
+/* General responsive font-size using vmin */
+html {
+  font-size: calc(10px + 1vmin); /* Base font size responsive to viewport */
+}
+
 .App {
   text-align: center;
   display: flex;
@@ -23,12 +28,13 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(12px + 2vmin); /* Responsive font-size */
   color: white;
 }
 
 .App-link {
   color: #61dafb;
+  font-size: calc(12px + 1.5vmin); /* Responsive link font-size */
 }
 
 @keyframes App-logo-spin {
@@ -44,47 +50,102 @@
   color: white;
 }
 
-#searchBarForm{
+#searchBarForm {
   display: flex;
   flex-direction: column;
   width: 25%;
+  font-size: calc(10px + 1vmin); /* Responsive font-size */
 }
 
-#container{
+#container {
   display: flex;
   justify-content: space-around;
   width: 100%;
 }
-#container>*{
+
+#container > * {
   flex-basis: 40%;
 }
 
-#signIn{
+#signIn {
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-#signIn>a{
+#signIn > a {
   padding: 2rem;
   background-color: white;
   border-radius: 1rem;
-  display: inline;
+  display: inline-block;
   width: 30%;
+  font-size: calc(12px + 1.5vmin); /* Responsive font-size */
 }
-#signIn>a>p{
+
+#signIn > a > p {
   color: black;
+  font-size: calc(12px + 1vmin); /* Responsive font-size */
 }
-#signIn img{
+
+#signIn img {
   width: 20%;
 }
 
-#searchBarInputText{
+#searchBarInputText {
   border: none;
   border-bottom: 2px solid red;
-  margin: .2rem;
+  margin: 0.2rem;
+  font-size: calc(10px + 1vmin); /* Responsive font-size */
 }
-label{
+
+label {
   font-weight: bold;
+  font-size: calc(10px + 1vmin); /* Responsive label font-size */
+}
+
+ul {
+  list-style: none;
+}
+
+ul > li {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid gray;
+  border-radius: 1rem;
+  margin: 1rem;
+  font-size: calc(10px + 1vmin); /* Responsive font-size */
+}
+
+ul > li > * {
+  margin: 0.5rem;
+}
+
+ul > li > button {
+  background-color: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: calc(10px + 1vmin); /* Responsive font-size */
+}
+
+/* Media queries for even finer control over different breakpoints */
+@media (max-width: 768px) {
+  html {
+    font-size: calc(9px + 1.5vmin);
+  }
+
+  .App-header {
+    font-size: calc(10px + 1.8vmin);
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: calc(8px + 1.5vmin);
+  }
+
+  .App-header {
+    font-size: calc(10px + 1.5vmin);
+  }
 }

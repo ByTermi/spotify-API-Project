@@ -1,4 +1,3 @@
-import { render } from "@testing-library/react";
 import React from "react";
 
 function Playlist({ playlist, onSavePlaylist, playlistName, setPlaylistName, setPlaylist }) {
@@ -6,7 +5,7 @@ function Playlist({ playlist, onSavePlaylist, playlistName, setPlaylistName, set
     <div>
       <h2>Nombre de la Playlist:</h2>
       <input
-      type="text"
+        type="text"
         name="playlistName"
         value={playlistName}
         onChange={(e) => {
@@ -14,13 +13,19 @@ function Playlist({ playlist, onSavePlaylist, playlistName, setPlaylistName, set
         }}
       />
       <ul>
-        {playlist.map((track) => (
-          <li key={track.id} className="songContainer">
+        {playlist.map((track, index) => (
+          <li key={`${track.id}-${index}`} className="songContainer">
             <strong>{track.name}</strong>{" "}
             {track.artists.map((artist) => artist.name).join(", ")}
             <button
-              onClick={() => {setPlaylist(playlist.filter((current) => current.id !== track.id)) }}
-            >Delete</button>
+              onClick={() => {
+                setPlaylist((prevPlaylist) =>
+                  prevPlaylist.filter((_, i) => i !== index)
+                );
+              }}
+            >
+              Delete
+            </button>
           </li>
         ))}
       </ul>
