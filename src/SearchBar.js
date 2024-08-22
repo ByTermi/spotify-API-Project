@@ -12,7 +12,7 @@ function SearchBar({ search, onSearchChange, onSubmit }) {
 
   return (
     <form onSubmit={handleSubmit} id="searchBarForm">
-      <label for="searchBarInputText">Search songs</label>
+      <label htmlFor="searchBarInputText">Search songs</label>
       <input
         type="text"
         id="searchBarInputText"

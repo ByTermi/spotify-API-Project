@@ -3,7 +3,7 @@ import React from "react";
 function Playlist({ playlist, onSavePlaylist, playlistName, setPlaylistName, setPlaylist }) {
   return (
     <div>
-      <h2>Nombre de la Playlist:</h2>
+      <h2>Playlist name:</h2>
       <input
         type="text"
         name="playlistName"
@@ -29,7 +29,7 @@ function Playlist({ playlist, onSavePlaylist, playlistName, setPlaylistName, set
           </li>
         ))}
       </ul>
-      <button onClick={onSavePlaylist}>Guardar Playlist en Spotify</button>
+      <button onClick={onSavePlaylist}>Save Playlist to Spotify</button>
     </div>
   );
 }

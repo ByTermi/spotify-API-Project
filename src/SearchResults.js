@@ -4,7 +4,7 @@ import Track from "./Track";
 function SearchResults({ tracks, onAddToPlaylist }) {
   return (
     <div>
-      <h2>Resultados de la Búsqueda:</h2>
+      <h2>Search results:</h2>
       <ul>
         {tracks.map((track) => (
           <Track key={track.id} track={track} onAddToPlaylist={onAddToPlaylist} />
