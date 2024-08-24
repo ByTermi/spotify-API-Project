@@ -25,7 +25,7 @@ function App() {
   async function search() {
     if (!searchQuery) return;
 
-    const url = `https://api.spotify.com/v1/search?q=track:${encodeURIComponent(
+    const url = `https://api.spotify.com/v1/search?q=track${encodeURIComponent(
       searchQuery
     )}&type=track&limit=10`;
 
