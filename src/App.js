@@ -19,15 +19,17 @@ function App() {
     const token = params.get("access_token");
     if (token) {
       setAccessToken(token);
+      // Limpia el hash de la URL para evitar mostrar el token en la barra de direcciones
+      window.location.hash = "";
     }
   }, []);
+  
 
   async function search() {
     if (!searchQuery) return;
 
-    const url = `https://api.spotify.com/v1/search?q=track${encodeURIComponent(
-      searchQuery
-    )}&type=track&limit=10`;
+    const url = `https://api.spotify.com/v1/search?q=${encodeURIComponent(searchQuery)}&type=track&limit=10`;
+
 
     try {
       const response = await fetch(url, {
