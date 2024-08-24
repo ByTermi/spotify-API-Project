@@ -1,4 +1,3 @@
-// App.js
 import React, { useEffect, useState } from "react";
 import "./App.css";
 import SearchBar from "./SearchBar";
@@ -19,17 +18,21 @@ function App() {
     const token = params.get("access_token");
     if (token) {
       setAccessToken(token);
-      // Limpia el hash de la URL para evitar mostrar el token en la barra de direcciones
       window.location.hash = "";
     }
   }, []);
-  
+
 
   async function search() {
     if (!searchQuery) return;
 
-    const url = `https://api.spotify.com/v1/search?q=${encodeURIComponent(searchQuery)}&type=track&limit=10`;
 
+    if (!accessToken) {
+      alert("No access token available. Please log in.");
+      return;
+    }
+
+    const url = `https://api.spotify.com/v1/search?q=${encodeURIComponent(searchQuery)}&type=track&limit=10`;
 
     try {
       const response = await fetch(url, {
@@ -39,6 +42,11 @@ function App() {
           "Content-Type": "application/json",
         },
       });
+
+      if (response.status === 401 || response.status === 403) {
+        alert("Access token expired or invalid. Please log in again.");
+        return;
+      }
 
       if (!response.ok) {
         throw new Error(
